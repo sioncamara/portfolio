@@ -14,26 +14,8 @@
   @include vendor("justify-content", "center");
   @include vendor("flex-direction", "column");
   position: relative;
-  max-width: 320px;
-
-   
-  // 576px window width and more
-  @include sm {
-  max-width: 500px;
-}
-// 992px window width and more
-@include lg {
-    // margin-left: auto;
-    // margin-right: auto;
-    max-width: 1100px;
-}
-// 1400px window width and more
-@include rwd(1400) {
-    // margin-bottom: 20px;
-    // margin-top: 20px;
-    max-width:100%
-}
-
+  max-width: 100%;
+  
   z-index: 3;
   display: none;
 
@@ -46,7 +28,25 @@
     @include padding(2.5rem, 2.5rem, (2rem, 0, 1rem, 0));
     position: relative;
     width: 40rem;
+    max-width: 320px;
+
    
+    // 576px window width and more
+    @include sm {
+    max-width: 500px;
+  }
+// 992px window width and more
+  @include lg {
+      // margin-left: auto;
+      // margin-right: auto;
+      max-width: 1100px;
+  }
+// 1400px window width and more
+  @include rwd(1400) {
+      // margin-bottom: 20px;
+      // margin-top: 20px;
+      max-width:100%
+  }
 
     // acumalate for various lengths
     background-color: transparentize(_palette(bg), 0.15);
