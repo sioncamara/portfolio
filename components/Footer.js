@@ -1,13 +1,16 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import SocialLinks from "./SocialLinks"
 
 const Footer = (props) => (
-    <footer id="footer" style={props.timeout ? {display: 'none'} : {}}>
-        <p className="copyright">&copy; Next.js Starter - Dimension. Design: <a href="https://html5up.net">HTML5 UP</a>. Built with: <a href="https://github.com/zeit/next.js">Next.js</a></p>
-    </footer>
-)
+  <footer id="footer" style={props.timeout ? { display: "none" } : {}}>
+    <div>
+      <SocialLinks />
+    </div>
+  </footer>
+);
 
 Footer.propTypes = {
-    timeout: PropTypes.bool
-}
+  timeout: PropTypes.bool,
+};
 
-export default Footer
+export default Footer;
