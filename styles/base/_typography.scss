@@ -41,6 +41,12 @@
 		text-decoration: none;
 		color: inherit;
 
+		&.icons{
+			font-size: small;
+			width: 50px;
+			height: 20px;
+		}
+
 		&.noDots{
 			border-bottom-color: transparent;	
 		}

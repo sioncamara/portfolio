@@ -1,11 +1,14 @@
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-import faFacebook from "@fortawesome/fontawesome-free-brands/faFacebook";
-import faLinkedin from "@fortawesome/fontawesome-free-brands/faLinkedin";
-import faGithub from "@fortawesome/fontawesome-free-brands/faGithub";
-import Icon from '@material-ui/core/Icon';
-import SvgIcon from '@material-ui/core/SvgIcon';
-import TwitterIcon from '@material-ui/icons/Twitter';
+
+import  FontAwesomeIcon  from '@fortawesome/react-fontawesome'
+import {faGithub, faFacebook, faLinkedin  } from "@fortawesome/fontawesome-free-brands"
 import React from "react";
+import { createGlobalStyle } from "styled-components";
+import { config, dom } from "@fortawesome/fontawesome-svg-core";
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { FaLinkedinIn, FaFacebook, FaGithub } from 'react-icons/fa';
+
+config.autoAddCss = false;
+
 
 export default function SocialLinks(){
   return(
@@ -13,18 +16,21 @@ export default function SocialLinks(){
       
         <li>
           <a href="https://www.facebook.com/sion.boguszewicz">
-            <FontAwesomeIcon icon={faFacebook} />
+          <FaFacebook style={{fontSize: "90%"}}/>
+  
           </a>
         </li>
+        
+        <li>
 
-        <li>
           <a href="https://github.com/sioncamara">
-            <FontAwesomeIcon icon={faGithub} />
+          <div style={{textAlign: "center"}}><FaGithub style={{fontSize: "190%"}, {}} /></div>
+            
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/sion-wilks/">
-          <TwitterIcon></TwitterIcon>
+          <a className="icon" href="https://www.linkedin.com/in/sion-wilks/" >
+          <FaLinkedinIn style={{fontSize: "170%"},{} }/>
           </a>
         </li>
       </ul>

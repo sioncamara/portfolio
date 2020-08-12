@@ -30,7 +30,7 @@ console.log(props.image);
       
       {props.hasTag && 
       <>
-      <div style={{textAlign: "center"}} > <AnchorLink className="noDots" href={props.tag}><img src="https://img.icons8.com/ios/50/000000/double-down.png"/></AnchorLink></div>
+      <div style={{textAlign: "center"}} > <AnchorLink className="noDots" href={props.tag}><img src="/images/invertedArrows.png"/></AnchorLink></div>
       </>
       }
 

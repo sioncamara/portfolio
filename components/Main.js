@@ -41,6 +41,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
           image="/images/pic01.jpg"
           articleTimeout={props.articleTimeout}
           first={true}
+          
           close={close(false)}
           
         />
@@ -52,7 +53,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
           type="projects"
           title="Project 1"
           article={props.article}
-          image="/images/sionsblog.png"
+          image="/images/2.jpg"
           articleTimeout={props.articleTimeout}
           first={true}
           hasTag={true}
@@ -69,7 +70,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
           type="projects"
           title="Project 2"
           article={props.article}
-          image="/images/sionsblog.png"
+          image="/images/2.jpg"
           articleTimeout={props.articleTimeout}
           hasTag={true}
           tag="#P3"

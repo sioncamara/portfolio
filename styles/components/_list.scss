@@ -56,6 +56,8 @@
 				a {
 					border-radius: 100%;
 					box-shadow: inset 0 0 0 _size(border-width) _palette(border);
+					position: relative;
+					bottom: 4;
 					display: inline-block;
 					height: 2.25rem;
 					line-height: 2.25rem;
