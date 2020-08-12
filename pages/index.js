@@ -17,14 +17,13 @@ export default function index(props) {
   const [article, setArticle] = useState("");
   const [loading, setLoading] = useState("is-loading");
 
-
   useEffect(() => {
-   const timer = setTimeout(() => {
-      setLoading("")
+    const timer = setTimeout(() => {
+      setLoading("");
     }, 100);
 
-    if(timer) return () => clearTimeout(timeoutId);
-  },[]);
+    if (timer) return () => clearTimeout(timeoutId);
+  }, []);
 
   const handleOpenArticle = (article) => {
     setIsArticleVisible(!isArticleVisible);
@@ -42,7 +41,6 @@ export default function index(props) {
   const handleCloseArticle = () => {
     setArticleTimeout(!articleTimeout);
 
-
     setTimeout(() => {
       setTimeout(!timeout);
     }, 325);
@@ -59,6 +57,8 @@ export default function index(props) {
         <Head>
           <title>Sion Wilks</title>
           <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i" rel="stylesheet" />
+          <meta property="og:title" content="Sion Wilks" />
+          <meta property="og:image" content="/images/portfolio-preview.png" />
         </Head>
 
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
