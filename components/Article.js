@@ -1,8 +1,9 @@
 
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-export default (props) => {
+export default function Article(props) {
 //console.log("is the article alone?", isAlone);
+console.log(props.image);
 
     return(
     <article
@@ -11,8 +12,8 @@ export default (props) => {
       style={{ display: "none" }}
     >
       <h2 className="major">{props.title}</h2>
-      <span className="image main">
-       <a target="_blank" rel="noopener noreferrer" href="https://nextjs-portfolio-psi.vercel.app/"><img src={props.image} alt="" /></a> 
+      <span  className="image main">
+       <a  target="_blank" rel="noopener noreferrer" href="https://nextjs-portfolio-psi.vercel.app/"><img src={props.image} alt="" /></a> 
       </span>
       <p>
         Hi, I am a student at the University of Wisconsin Madison with a passion for full stack development. By the way, check out my <a href="#P3">awesome work</a>.
@@ -29,7 +30,7 @@ export default (props) => {
       
       {props.hasTag && 
       <>
-      <div style={{textAlign: "center"}} > <AnchorLink href={props.tag}><img src="https://img.icons8.com/ios/50/000000/double-down.png"/></AnchorLink></div>
+      <div style={{textAlign: "center"}} > <AnchorLink className="noDots" href={props.tag}><img src="https://img.icons8.com/ios/50/000000/double-down.png"/></AnchorLink></div>
       </>
       }
 

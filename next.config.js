@@ -1,7 +1,11 @@
 const path = require('path')
 const glob = require('glob')
+const withImages = require('next-images')
 
-module.exports = {
+module.exports = withImages({
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
   webpack: (config, { dev }) => {
     config.module.rules.push(
       {
@@ -38,3 +42,4 @@ module.exports = {
   //   }
   // }
 }
+)

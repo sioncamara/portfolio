@@ -12,7 +12,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 
 
 
-export default (props) => {
+ export default function Main(props) {
   let close = (multiPaged) => (
     <div
       className={multiPaged ? "closePage" : "close"}
@@ -38,7 +38,7 @@ export default (props) => {
           id="Skills"
           article={props.article}
           type="skills"
-          image="/static/images/pic01.jpg"
+          image="/images/pic01.jpg"
           articleTimeout={props.articleTimeout}
           first={true}
           close={close(false)}
@@ -52,7 +52,7 @@ export default (props) => {
           type="projects"
           title="Project 1"
           article={props.article}
-          image="/static/images/sionsblog.png"
+          image="/images/sionsblog.png"
           articleTimeout={props.articleTimeout}
           first={true}
           hasTag={true}
@@ -69,7 +69,7 @@ export default (props) => {
           type="projects"
           title="Project 2"
           article={props.article}
-          image="/static/images/2.jpg"
+          image="/images/sionsblog.png"
           articleTimeout={props.articleTimeout}
           hasTag={true}
           tag="#P3"
@@ -81,7 +81,7 @@ export default (props) => {
           type="projects"
           title="Project 3"
           article={props.article}
-          image="/static/images/2.jpg"
+          image="/images/2.jpg"
           articleTimeout={props.articleTimeout}
           hasTag={true}
           tag="#P4"
@@ -95,7 +95,7 @@ export default (props) => {
           type="projects"
           title="Project 4"
           article={props.article}
-          image="/static/images/2.jpg"
+          image="/images/2.jpg"
           articleTimeout={props.articleTimeout}
           close={close(true)}
         />
@@ -110,7 +110,7 @@ export default (props) => {
           type="about"
           title="About me"
           article={props.article}
-          image="/static/images/2.jpg"
+          image="/images/2.jpg"
           articleTimeout={props.articleTimeout}
           first={true}
           close={close(false)}

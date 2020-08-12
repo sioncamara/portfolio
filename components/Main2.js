@@ -26,7 +26,7 @@ export default (props) => {
     >
       <h2 className="major">Intro</h2>
       <span className="image main">
-        <img src="/static/images/pic01.jpg" alt="" />
+        <img src="/public/images/pic01.jpg" alt="" />
       </span>
       <p>
         Hi, I am a student at the University of Wisconsin Madison with a passion for full stack development. By the way, check out my <a href="#work">awesome work</a>.
@@ -50,7 +50,7 @@ export default (props) => {
     >
       <h2 className="major">Work</h2>
       <span className="image main">
-        <img src="/static/images/pic02.jpg" alt="" />
+        <img src="/public/images/pic02.jpg" alt="" />
       </span>
       <p>
         Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam
@@ -73,7 +73,7 @@ export default (props) => {
     >
       <h2 className="major">About</h2>
       <span className="image main">
-        <img src="/static/images/pic03.jpg" alt="" />
+        <img src="/public/images/pic03.jpg" alt="" />
       </span>
       <p>
         Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend

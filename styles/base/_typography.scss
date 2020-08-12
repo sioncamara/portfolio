@@ -37,9 +37,13 @@
 			'border-bottom-color #{_duration(transition)} ease-in-out'
 		));
 		border-bottom: dotted 1px _palette(fg-light);
-		border-bottom-color: transparent;
+		
 		text-decoration: none;
 		color: inherit;
+
+		&.noDots{
+			border-bottom-color: transparent;	
+		}
 
 		&:hover {
 			border-bottom-color: transparent;
