@@ -2,7 +2,6 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 export default function Article(props) {
-//console.log("is the article alone?", isAlone);
 
     return(
     <article

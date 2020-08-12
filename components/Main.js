@@ -13,7 +13,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 
 
  export default function Main(props) {
-  let close = (multiPaged) => (
+  let close = (multiPaged) => ( // if multi page is true include x outside of any articles. Otherwise include on only article
     <div
       className={multiPaged ? "closePage" : "close"}
       onClick={() => {
@@ -22,14 +22,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
     ></div>
   );
 
-  let closePage = (
-    <div
-      className="closePage"
-      onClick={() => {
-        props.onCloseArticle();
-      }}
-    ></div>
-  );
+  
 
   return (
     <div id="main" style={props.timeout ? { display: "flex" } : { display: "none" }}>
