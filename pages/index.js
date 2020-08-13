@@ -1,6 +1,6 @@
 import Head from "next/head";
 import stylesheet from "styles/main.scss";
-import {getAboutPage} from "../lib/api"
+import {getAboutPage, getSkillsPage, getAllProjects, getResume} from "../lib/api"
 
 import Header from "../components/Header";
 import Main from "../components/Main";
@@ -13,7 +13,7 @@ config.autoAddCss = false;
 
 console.log(process.env.EMAILJS_USER_ID);
 
-export default function index({aboutPage}) {
+export default function index({aboutPage, skillsPage, projects, resume}) {
   const [isArticleVisible, setIsArticleVisible] = useState(false);
   const [timeout, setTimeout] = useState(false);
   const [articleTimeout, setArticleTimeout] = useState(false);
@@ -59,7 +59,7 @@ export default function index({aboutPage}) {
       <div>
         <Head>
           <title>Sion Wilks</title>
-          <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i" rel="stylesheet" />
+          <link href="/images/logo.ico" rel="shortcut icon" />
           <meta property="og:title" content="Sion Wilks" />
           <meta property="og:image" content="/images/portfolio-preview.png" />
         </Head>
@@ -67,7 +67,7 @@ export default function index({aboutPage}) {
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
 
         <div id="wrapper">
-          <Header onOpenArticle={handleOpenArticle} timeout={timeout} />
+          <Header onOpenArticle={handleOpenArticle} timeout={timeout} resume={resume}/>
           <Main
             isArticleVisible={isArticleVisible}
             timeout={timeout}
@@ -75,6 +75,8 @@ export default function index({aboutPage}) {
             article={article}
             onCloseArticle={handleCloseArticle}
             aboutPage={aboutPage}
+            skillsPage={skillsPage}
+            projects={projects}
           />
           <Footer timeout={timeout} />
         </div>
@@ -88,11 +90,19 @@ export default function index({aboutPage}) {
 
 export async function getStaticProps() {
   const aboutPage = await getAboutPage();
+  const skillsPage = await getSkillsPage();
+  const projects = await getAllProjects();
+  const resume = await getResume();
+  //console.log("skillsPage", skillsPage);
 
   
   return {
     props: {
-      aboutPage
+      aboutPage,
+      skillsPage,
+      projects,
+      resume
+     
     },
   };
 }
