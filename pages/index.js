@@ -1,5 +1,6 @@
 import Head from "next/head";
 import stylesheet from "styles/main.scss";
+import {getAboutPage} from "../lib/api"
 
 import Header from "../components/Header";
 import Main from "../components/Main";
@@ -10,7 +11,9 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 // You should do that in a Layout file or in `gatsby-browser.js`.
 config.autoAddCss = false;
 
-export default function index(props) {
+console.log(process.env.EMAILJS_USER_ID);
+
+export default function index({aboutPage}) {
   const [isArticleVisible, setIsArticleVisible] = useState(false);
   const [timeout, setTimeout] = useState(false);
   const [articleTimeout, setArticleTimeout] = useState(false);
@@ -71,6 +74,7 @@ export default function index(props) {
             articleTimeout={articleTimeout}
             article={article}
             onCloseArticle={handleCloseArticle}
+            aboutPage={aboutPage}
           />
           <Footer timeout={timeout} />
         </div>
@@ -79,4 +83,16 @@ export default function index(props) {
       </div>
     </div>
   );
+}
+
+
+export async function getStaticProps() {
+  const aboutPage = await getAboutPage();
+
+  
+  return {
+    props: {
+      aboutPage
+    },
+  };
 }

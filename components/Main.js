@@ -6,14 +6,16 @@ import faInstagram from "@fortawesome/fontawesome-free-brands/faInstagram";
 import faGithub from "@fortawesome/fontawesome-free-brands/faGithub";
 import React from "react";
 import Article from "./Article";
-import SocialLinks from "./SocialLinks";
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-import ScrollableAnchor from 'react-scrollable-anchor'
+import Article2 from "./Article2";
+import ContactForm from "./ContactForm";
 
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import ScrollableAnchor from "react-scrollable-anchor";
 
-
- export default function Main(props) {
-  let close = (multiPaged) => ( // if multi page is true include x outside of any articles. Otherwise include on only article
+export default function Main(props) {
+  let close = (
+    multiPaged // if multi page is true include x outside of any articles. Otherwise include on only article
+  ) => (
     <div
       className={multiPaged ? "closePage" : "close"}
       onClick={() => {
@@ -22,23 +24,19 @@ import ScrollableAnchor from 'react-scrollable-anchor'
     ></div>
   );
 
-  
-
   return (
     <div id="main" style={props.timeout ? { display: "flex" } : { display: "none" }}>
       <div>
-        <Article
-          id="Skills"
-          article={props.article}
-          type="skills"
-          image="/images/pic01.jpg"
-          articleTimeout={props.articleTimeout}
-          first={true}
-          
-          close={close(false)}
-          
-        />
-      </div>
+     
+
+      <Article2 
+        page={props.aboutPage}
+        type="about"
+        article={props.article}
+        articleTimeout={props.articleTimeout}
+        first={true}
+        close={close(false)}
+      />
 
       <div>
         <Article
@@ -52,10 +50,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
           hasTag={true}
           tag="#P2"
           close={close(true)}
-        >
-         
-        </Article>
-        
+        ></Article>
 
         <br />
         <Article
@@ -83,7 +78,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
         />
 
         <br />
-        
+
         <Article
           id="P4"
           type="projects"
@@ -93,55 +88,32 @@ import ScrollableAnchor from 'react-scrollable-anchor'
           articleTimeout={props.articleTimeout}
           close={close(true)}
         />
-         
 
         {close(true)}
       </div>
 
-     
       <Article
-          id="about"
-          type="about"
-          title="About me"
+          id="Skills"
           article={props.article}
-          image="/images/2.jpg"
+          type="skills"
+          image="/images/pic01.jpg"
           articleTimeout={props.articleTimeout}
           first={true}
           close={close(false)}
         />
+      </div>
 
+      
 
       <article
         id="contact"
         className={`${props.article === "contact" ? "active" : ""} ${props.articleTimeout ? "timeout" : ""}`}
         style={{ display: "none" }}
       >
-        <h2 className="major">Contact</h2>
-        <form method="post" action="#">
-          <div className="field half first">
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" />
-          </div>
-          <div className="field half">
-            <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" />
-          </div>
-          <div className="field">
-            <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="4"></textarea>
-          </div>
-          <ul className="actions">
-            <li>
-              <input type="submit" value="Send Message" className="special" />
-            </li>
-            <li>
-              <input type="reset" value="Reset" />
-            </li>
-          </ul>
-        </form>
-        <SocialLinks />
+        <ContactForm />
+        
         {close(false)}
       </article>
     </div>
   );
-};
+}

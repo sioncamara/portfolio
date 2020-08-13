@@ -1,5 +1,6 @@
 
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { RichText } from "prismic-reactjs";
 
 export default function Article(props) {
 

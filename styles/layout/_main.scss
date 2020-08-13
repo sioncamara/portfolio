@@ -5,7 +5,15 @@
 ///
 
 /* Main */
-
+.major {
+  border-bottom: solid _size(border-width) _palette(border);
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  width: -ms-max-content;
+  width: max-content;
+  padding-bottom: 0.5rem;
+  margin: 0 0 (_size(element-margin) * 1) 0;
+}
 #main {
   @include vendor("flex-grow", "1");
   @include vendor("flex-shrink", "1");
