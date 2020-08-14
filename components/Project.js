@@ -18,7 +18,7 @@ export default function Article(props) {
 
       
       <span  className="image main">
-       <a  target="_blank" rel="noopener noreferrer" href={props.page?.link[0].text}><img  src={props.page.image?.url ?? null} alt="" /></a> 
+       <a  href={props.page?.link[0].text}><img  src={props.page.image?.url ?? null} alt="" /></a> 
       </span>
 
       <RichText render={props.page.content} />

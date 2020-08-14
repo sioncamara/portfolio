@@ -51,7 +51,7 @@ const Header = (props) => {
         </li>
 
         <li>
-          <a target="_blank" rel="noopener noreferrer" href={props.resume.node.resume.url}>
+          <a  href={props.resume.node.resume.url}>
             Resume
           </a>
         </li>
