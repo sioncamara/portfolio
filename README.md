@@ -11,10 +11,10 @@ To get started, simply clone the repository and run `npm install`
 
 ```
 # Clone the repo
-git clone https://github.com/codebushi/nextjs-starter-dimension.git
+git clone https://github.com/sioncamara/portfolio.git
 
 # Move into the new directory
-cd nextjs-starter-dimension/
+cd portfolio/
 
 # Install npm packages
 npm install
@@ -22,6 +22,9 @@ npm install
 # Start up the next.js dev server, browse to http://localhost:3000/
 npm run dev
 ```
+
+# rename next.config2.js to next.config.js
+I had to store my .env variables in the origional file 
 
 ## Generating the Static Site
 
