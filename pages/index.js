@@ -7,7 +7,6 @@ import Main from "../components/Main";
 import Footer from "../components/Footer";
 import React, { useState, useEffect } from "react";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
 // You should do that in a Layout file or in `gatsby-browser.js`.
 
 
