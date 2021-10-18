@@ -15,7 +15,7 @@ export default function Article(props) {
        <a  target="_blank" rel="noopener noreferrer" href="https://nextjs-portfolio-psi.vercel.app/"><img src={props.image} alt="" /></a> 
       </span>
       <p>
-        Hi, I am a student at the University of Wisconsin Madison with a passion for full stack development. By the way, check out my <a href="#P3">awesome work</a>.
+        Hi, I am a computer science student at the University of Wisconsin Madison with a passion for full stack development. By the way, check out my <a href="#P3">awesome work</a>.
       </p>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti
