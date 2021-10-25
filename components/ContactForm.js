@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SocialLinks from "./SocialLinks";
-import emailjs from "emailjs-com";
-
+import emailjs, {init} from "emailjs-com";
+init("user_C7stO484c3zDEat6zLXth");
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -10,6 +10,8 @@ export default function ContactForm() {
   const [validName, setValidName] = useState(true);
   const [validEmail, setValidEmail] = useState(true);
   const [validMessage, setValidMessage] = useState(true);
+
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -48,6 +50,7 @@ export default function ContactForm() {
 
     const serviceId = "default_service";
     const templateId = "contactme";
+    init("user_C7stO484c3zDEat6zLXth");
     const userId = process.env.EMAILJS_USER_ID;
     //alert("Your email was sucessfuly sent.\n Thank you for contacting me, I will get back to you as soon as possible.");
 

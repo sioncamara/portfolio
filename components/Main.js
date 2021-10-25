@@ -1,11 +1,4 @@
-import PropTypes from "prop-types";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-import faTwitter from "@fortawesome/fontawesome-free-brands/faTwitter";
-import faFacebook from "@fortawesome/fontawesome-free-brands/faFacebook";
-import faInstagram from "@fortawesome/fontawesome-free-brands/faInstagram";
-import faGithub from "@fortawesome/fontawesome-free-brands/faGithub";
 import React, { useState } from "react";
-import Article from "./Article";
 import Article2 from "./Article2";
 import Project from "./Project";
 import ContactForm from "./ContactForm";
@@ -14,8 +7,10 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import ScrollableAnchor from "react-scrollable-anchor";
 
 export default function Main(props) {
+
+  // if multi page is true include x outside of any articles. Otherwise include on only article
   let close = (
-    multiPaged // if multi page is true include x outside of any articles. Otherwise include on only article
+    multiPaged 
   ) => {
     console.log(multiPaged);
     return (
@@ -58,10 +53,15 @@ export default function Main(props) {
         />
 
         <div>
+          {/*close(true)*/}
+          <br />
+          <br />
           {props.projects?.map(({ node }) => {
+            console.log("Checing if priority is working:", node.priority)
             return (
               <>
                 <Project
+                  key={node.priority}
                   page={node}
                   type="projects"
                   article={props.article}
@@ -75,7 +75,7 @@ export default function Main(props) {
               </>
             );
           })}
-          {close(true)}
+          
 
         </div>
 

@@ -8,7 +8,6 @@ const Header = (props) => {
   return(
   <header id="header" style={props.timeout ? { display: "none" } : {}}>
     <div className="logo">
-      {/*<span className="icon fa-diamond"></span>*/}
       <FaGem style={{ fontSize: "350%", textAlign: "center", position: "relative", top: "1rem" }} />
     </div>
     <div className="content">
@@ -20,7 +19,6 @@ const Header = (props) => {
       <ul>
         <li>
           <a
-            href="javascript:;"
             onClick={() => {
               props.onOpenArticle("about");
             }}
@@ -30,7 +28,6 @@ const Header = (props) => {
         </li>
         <li>
           <a
-            href="javascript:;"
             onClick={() => {
               props.onOpenArticle("skills");
             }}
@@ -40,7 +37,6 @@ const Header = (props) => {
         </li>
         <li>
           <a
-            href="javascript:;"
             onClick={() => {
               props.onOpenArticle("projects");
             }}
@@ -56,7 +52,6 @@ const Header = (props) => {
         </li>
         <li>
           <a
-            href="javascript:;"
             onClick={() => {
               props.onOpenArticle("contact");
             }}
