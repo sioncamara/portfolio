@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import SocialLinks from "./SocialLinks"
+import SocialLinks from "./SocialLinks";
 
 const Footer = (props) => (
   <footer id="footer" style={props.timeout ? { display: "none" } : {}}>

@@ -90,8 +90,6 @@ export async function getStaticProps() {
   const skillsPage = await getSkillsPage();
   const projects = await getAllProjects();
   const resume = await getResume();
-  //console.log("skillsPage", skillsPage);
-
   
   return {
     props: {

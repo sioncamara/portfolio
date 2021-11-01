@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SocialLinks from "./SocialLinks";
-import emailjs, {init} from "emailjs-com";
+import emailjs, { init } from "emailjs-com";
 init("user_C7stO484c3zDEat6zLXth");
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -10,8 +10,6 @@ export default function ContactForm() {
   const [validName, setValidName] = useState(true);
   const [validEmail, setValidEmail] = useState(true);
   const [validMessage, setValidMessage] = useState(true);
-
-
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -46,22 +44,22 @@ export default function ContactForm() {
       message: message,
     };
 
-    console.log(name);
-
     const serviceId = "default_service";
     const templateId = "contactme";
     init("user_C7stO484c3zDEat6zLXth");
     const userId = process.env.EMAILJS_USER_ID;
-    //alert("Your email was sucessfuly sent.\n Thank you for contacting me, I will get back to you as soon as possible.");
 
-    emailjs.send(serviceId, templateId, templateParams, userId)
-    .then((result) => {
-        console.log(result.text);
-        alert("Your email was sucessfuly sent.\n Thank you for contacting me. I will get back to you as soon as possible.")
-    }, (error) => {
+    emailjs.send(serviceId, templateId, templateParams, userId).then(
+      (result) => {
+        alert(
+          "Your email was sucessfuly sent.\n Thank you for contacting me. I will get back to you as soon as possible."
+        );
+      },
+      (error) => {
         console.log(error.text);
-        alert("Email failed :(")
-    })
+        alert("Email failed :(");
+      }
+    );
 
     makeInputsValid();
     handleReset();
@@ -87,13 +85,22 @@ export default function ContactForm() {
           <label style={{ color: `${validName ? "" : "red"}` }} htmlFor="name">
             Name
           </label>
-          <input type="text" name="name" id="name" value={name} onChange={(event) => {
-              setName(event.target.value)
-              makeInputsValid()
-          } } />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={name}
+            onChange={(event) => {
+              setName(event.target.value);
+              makeInputsValid();
+            }}
+          />
         </div>
         <div className="field half">
-          <label style={{ color: `${validEmail ? "" : "red"}` }} htmlFor="email">
+          <label
+            style={{ color: `${validEmail ? "" : "red"}` }}
+            htmlFor="email"
+          >
             Email
           </label>
           <input
@@ -103,13 +110,15 @@ export default function ContactForm() {
             value={email}
             onChange={(event) => {
               setEmail(event.target.value);
-              makeInputsValid()
-              console.log(event);
+              makeInputsValid();
             }}
           />
         </div>
         <div className="field">
-          <label style={{ color: `${validMessage ? "" : "red"}` }} htmlFor="message">
+          <label
+            style={{ color: `${validMessage ? "" : "red"}` }}
+            htmlFor="message"
+          >
             Message
           </label>
           <textarea
@@ -118,10 +127,9 @@ export default function ContactForm() {
             rows="4"
             value={message}
             onChange={(event) => {
-                setMessage(event.target.value)
-                makeInputsValid()
-            }
-            }
+              setMessage(event.target.value);
+              makeInputsValid();
+            }}
           ></textarea>
         </div>
         <ul className="actions">

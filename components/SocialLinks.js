@@ -1,13 +1,5 @@
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faFacebook,
-  faLinkedin,
-} from "@fortawesome/fontawesome-free-brands";
 import React from "react";
-import { createGlobalStyle } from "styled-components";
 import { config, dom } from "@fortawesome/fontawesome-svg-core";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { FaLinkedinIn, FaFacebook, FaGithub } from "react-icons/fa";
 
 config.autoAddCss = false;

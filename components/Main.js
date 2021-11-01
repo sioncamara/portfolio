@@ -1,18 +1,11 @@
 import React, { useState } from "react";
-import Article2 from "./Article2";
+import Article from "./Article";
 import Project from "./Project";
 import ContactForm from "./ContactForm";
 
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import ScrollableAnchor from "react-scrollable-anchor";
-
 export default function Main(props) {
-
   // if multi page is true include x outside of any articles. Otherwise include on only article
-  let close = (
-    multiPaged 
-  ) => {
-    console.log(multiPaged);
+  let close = (multiPaged) => {
     return (
       <div
         className={multiPaged ? "closePage" : "close"}
@@ -25,23 +18,13 @@ export default function Main(props) {
     );
   };
 
-  let backHome = () => (
-    <div
-      className={"closePage"}
-      onClick={() => {
-        props.onCloseArticle();
-      }}
-    >
-      <a> &larr; Back to home</a>{" "}
-    </div>
-  );
-
-  const [isFirst, setFirst] = useState(true);
-
   return (
-    <div id="main" style={props.timeout ? { display: "flex" } : { display: "none" }}>
+    <div
+      id="main"
+      style={props.timeout ? { display: "flex" } : { display: "none" }}
+    >
       <div>
-        <Article2
+        <Article
           page={props.aboutPage}
           page2={props.aboutPage.node}
           type="about"
@@ -49,15 +32,12 @@ export default function Main(props) {
           articleTimeout={props.articleTimeout}
           close={close(false)}
           first={true}
-         
         />
 
         <div>
-          {/*close(true)*/}
           <br />
           <br />
-          {props.projects?.map(({ node }) => {
-            console.log("Checing if priority is working:", node.priority)
+          {props.projects.map(({ node }) => {
             return (
               <>
                 <Project
@@ -71,15 +51,12 @@ export default function Main(props) {
                 />
 
                 <br />
-                
               </>
             );
           })}
-          
-
         </div>
 
-        <Article2
+        <Article
           page={props.skillsPage}
           type="skills"
           article={props.article}
@@ -91,7 +68,9 @@ export default function Main(props) {
 
       <article
         id="contact"
-        className={`${props.article === "contact" ? "active" : ""} ${props.articleTimeout ? "timeout" : ""}`}
+        className={`${props.article === "contact" ? "active" : ""} ${
+          props.articleTimeout ? "timeout" : ""
+        }`}
         style={{ display: "none" }}
       >
         <ContactForm />
