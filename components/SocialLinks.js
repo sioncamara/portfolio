@@ -1,8 +1,5 @@
 import React from "react";
-import { config, dom } from "@fortawesome/fontawesome-svg-core";
 import { FaLinkedinIn, FaFacebook, FaGithub } from "react-icons/fa";
-
-config.autoAddCss = false;
 
 export default function SocialLinks() {
   return (
