@@ -39,9 +39,8 @@ export default function Main(props) {
           <br />
           {props.projects.map(({ node }) => {
             return (
-              <>
+              <React.Fragment key={node.priority}>
                 <Project
-                  key={node.priority}
                   page={node}
                   type="projects"
                   article={props.article}
@@ -51,7 +50,7 @@ export default function Main(props) {
                 />
 
                 <br />
-              </>
+                </React.Fragment>
             );
           })}
         </div>
