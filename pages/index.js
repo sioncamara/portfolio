@@ -1,5 +1,4 @@
 import Head from "next/head";
-import stylesheet from "styles/main.scss";
 import {getAboutPage, getSkillsPage, getAllProjects, getResume} from "../lib/api"
 
 import Header from "../components/Header";
@@ -59,8 +58,6 @@ export default function index({aboutPage, skillsPage, projects, resume}) {
           <meta property="og:title" content="Sion Wilks" />
           <meta property="og:image" content="/images/portfolio-preview.png" />
         </Head>
-
-        <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
 
         <div id="wrapper">
           <Header onOpenArticle={handleOpenArticle} timeout={timeout} resume={resume}/>

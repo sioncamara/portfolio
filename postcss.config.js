@@ -1,8 +1,17 @@
 
 
 module.exports = {
-  plugins: [
-    require('postcss-easy-import')({prefix: '_'}), // keep this first
-    require('autoprefixer')({ /* ...options */ }), // so imports are auto-prefixed too
-  ]
-}
+  plugins: {
+    'postcss-easy-import': { prefix: '_' }, 
+    'postcss-flexbugs-fixes': {},
+    'postcss-preset-env': {
+      autoprefixer: {
+        flexbox: 'no-2009',
+      },
+      stage: 3,
+      features: {
+        'custom-properties': false,
+      },
+    },
+  },
+};
