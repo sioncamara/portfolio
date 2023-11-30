@@ -15,19 +15,19 @@
   "dependencies": {
     "emailjs-com": "^2.6.3",
     "next": "11",
-    "postcss-easy-import": "^4.0.0",
-    "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-preset-env": "^9.3.0",
     "prismic-javascript": "^3.0.2",
     "prismic-reactjs": "^1.3.2",
     "react": "^17.0.2",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^17.0.2",
-    "react-icons": "^3.11.0",
-    "sass": "^1.69.5"
+    "react-icons": "^3.11.0"
   },
   "devDependencies": {
     "postcss": "^8.4.31",
-    "@babel/core": "^7.23.5"
+    "@babel/core": "^7.23.5",
+    "postcss-easy-import": "^4.0.0",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^9.3.0",
+    "sass": "^1.69.5"
   }
 }
