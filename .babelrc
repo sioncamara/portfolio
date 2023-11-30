@@ -17,6 +17,5 @@
   ],
   "presets": [
     "next/babel"
-  ],
-  "ignore": []
+  ]
 }
