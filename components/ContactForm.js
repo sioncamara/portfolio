@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SocialLinks from "./SocialLinks";
-import emailjs, { init } from "emailjs-com";
-init("user_C7stO484c3zDEat6zLXth");
+// import emailjs, { init } from "emailjs-com";
+// init("user_C7stO484c3zDEat6zLXth");
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -46,20 +46,22 @@ export default function ContactForm() {
 
     const serviceId = "default_service";
     const templateId = "contactme";
-    init("user_C7stO484c3zDEat6zLXth");
+    // init("user_C7stO484c3zDEat6zLXth");
     const userId = process.env.EMAILJS_USER_ID;
 
-    emailjs.send(serviceId, templateId, templateParams, userId).then(
-      (result) => {
-        alert(
-          "Your email was sucessfuly sent.\n Thank you for contacting me. I will get back to you as soon as possible."
-        );
-      },
-      (error) => {
-        console.log(error.text);
-        alert("Email failed :(");
-      }
-    );
+    // emailjs.send(serviceId, templateId, templateParams, userId).then(
+    //   (result) => {
+    //     alert(
+    //       "Your email was sucessfuly sent.\n Thank you for contacting me. I will get back to you as soon as possible."
+    //     );
+    //   },
+    //   (error) => {
+    //     console.log(error.text);
+    //     alert("Email failed :(");
+    //   }
+    // );
+    
+    // holding off email functionality for now
 
     makeInputsValid();
     handleReset();
