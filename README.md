@@ -1,4 +1,5 @@
 # nextjs-starter-dimension
+
 A Next.js starter based on the Dimension site template, designed by HTML5 UP. Check out https://codebushi.com/nextjs-website-starters/ for more Next.js starters and templates.
 
 ## Preview
@@ -24,7 +25,8 @@ npm run dev
 ```
 
 # rename next.config2.js to next.config.js
-I had to store my .env variables in the origional file 
+
+I had to store my .env variables in the origional file
 
 ## Generating the Static Site
 

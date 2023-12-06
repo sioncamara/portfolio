@@ -1,5 +1,5 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicRichText } from "@prismicio/react";
 
 export default function Article(props) {
   return (
@@ -26,7 +26,7 @@ export default function Article(props) {
           <div style={{ textAlign: "center" }}>
             {" "}
             <AnchorLink className="noDots" href={props.tag}>
-              <img src="/images/invertedArrows.png" />
+              <img src="/images/invertedArrows.png" alt={"image not found"} />
             </AnchorLink>
           </div>
         </>

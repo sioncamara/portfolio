@@ -23,7 +23,7 @@
   @include vendor("flex-direction", "column");
   position: relative;
   max-width: 100%;
-  
+
   z-index: 3;
   display: none;
 
@@ -31,30 +31,32 @@
     @include vendor("transform", "translateY(0.25rem)");
     @include vendor(
       "transition",
-      ("opacity #{_duration(article)} ease-in-out", "transform #{_duration(article)} ease-in-out")
+      (
+        "opacity #{_duration(article)} ease-in-out",
+        "transform #{_duration(article)} ease-in-out"
+      )
     );
     @include padding(2.5rem, 2.5rem, (2rem, 0, 1rem, 0));
     position: relative;
     width: 40rem;
     max-width: 320px;
 
-   
     // 576px window width and more
     @include sm {
-    max-width: 500px;
-  }
-// 992px window width and more
-  @include lg {
+      max-width: 500px;
+    }
+    // 992px window width and more
+    @include lg {
       // margin-left: auto;
       // margin-right: auto;
       max-width: 100%;
-  }
-// 1400px window width and more
-  @include rwd(1400) {
+    }
+    // 1400px window width and more
+    @include rwd(1400) {
       // margin-bottom: 20px;
       // margin-top: 20px;
-      max-width:100%
-  }
+      max-width: 100%;
+    }
 
     // acumalate for various lengths
     background-color: transparentize(_palette(bg), 0.15);
@@ -88,7 +90,10 @@
       white-space: nowrap;
 
       &:before {
-        @include vendor("transition", "background-color #{_duration(transition)} ease-in-out");
+        @include vendor(
+          "transition",
+          "background-color #{_duration(transition)} ease-in-out"
+        );
         content: "";
         display: block;
         position: absolute;
@@ -130,7 +135,10 @@
       white-space: nowrap;
 
       &:before {
-        @include vendor("transition", "background-color #{_duration(transition)} ease-in-out");
+        @include vendor(
+          "transition",
+          "background-color #{_duration(transition)} ease-in-out"
+        );
         content: "";
         display: block;
         position: absolute;

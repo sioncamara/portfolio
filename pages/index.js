@@ -1,5 +1,10 @@
 import Head from "next/head";
-import {getAboutPage, getSkillsPage, getAllProjects, getResume} from "../lib/api"
+import {
+  getAboutPage,
+  getSkillsPage,
+  getAllProjects,
+  getResume,
+} from "../lib/api";
 
 import Header from "../components/Header";
 import Main from "../components/Main";
@@ -7,8 +12,7 @@ import Footer from "../components/Footer";
 import React, { useState, useEffect } from "react";
 // You should do that in a Layout file or in `gatsby-browser.js`.
 
-
-export default function index({aboutPage, skillsPage, projects, resume}) {
+export default function index({ aboutPage, skillsPage, projects, resume }) {
   const [isArticleVisible, setIsArticleVisible] = useState(false);
   const [timeout, setTimeout] = useState(false);
   const [articleTimeout, setArticleTimeout] = useState(false);
@@ -50,7 +54,11 @@ export default function index({aboutPage, skillsPage, projects, resume}) {
   };
 
   return (
-    <div className={`body ${loading} ${isArticleVisible ? "is-article-visible" : ""}`}>
+    <div
+      className={`body ${loading} ${
+        isArticleVisible ? "is-article-visible" : ""
+      }`}
+    >
       <div>
         <Head>
           <title>Sion Wilks</title>
@@ -60,7 +68,11 @@ export default function index({aboutPage, skillsPage, projects, resume}) {
         </Head>
 
         <div id="wrapper">
-          <Header onOpenArticle={handleOpenArticle} timeout={timeout} resume={resume}/>
+          <Header
+            onOpenArticle={handleOpenArticle}
+            timeout={timeout}
+            resume={resume}
+          />
           <Main
             isArticleVisible={isArticleVisible}
             timeout={timeout}
@@ -80,20 +92,18 @@ export default function index({aboutPage, skillsPage, projects, resume}) {
   );
 }
 
-
 export async function getStaticProps() {
   const aboutPage = await getAboutPage();
   const skillsPage = await getSkillsPage();
   const projects = await getAllProjects();
   const resume = await getResume();
-  
+
   return {
     props: {
       aboutPage,
       skillsPage,
       projects,
-      resume
-     
+      resume,
     },
   };
 }

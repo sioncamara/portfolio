@@ -60,7 +60,7 @@ export default function ContactForm() {
     //     alert("Email failed :(");
     //   }
     // );
-    
+
     // holding off email functionality for now
 
     makeInputsValid();
