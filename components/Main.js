@@ -50,7 +50,7 @@ export default function Main(props) {
                 />
 
                 <br />
-                </React.Fragment>
+              </React.Fragment>
             );
           })}
         </div>
