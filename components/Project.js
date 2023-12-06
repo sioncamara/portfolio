@@ -1,5 +1,5 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { RichText } from "prismic-reactjs";
+import { PrismicRichText } from '@prismicio/react'
 
 export default function Article(props) {
   return (
@@ -19,7 +19,7 @@ export default function Article(props) {
         </a>
       </span>
 
-      <RichText render={props.page.content} />
+      <PrismicRichText field={props.page.content} />
 
       {props.hasTag && (
         <>
