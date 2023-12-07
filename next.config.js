@@ -1,7 +1,8 @@
-import path from "path";
+const path = require("path");
 
 module.exports = {
   env: {
+
     EMAILJS_SERVICE_ID: "service_olqxew8",
     EMAILJS_TEMPLATE_ID: "template_8w1q7wh",
     EMAILJS_PROFILE_ID: "08YjjYgI54gZ_DORo",
