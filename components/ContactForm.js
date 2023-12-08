@@ -43,9 +43,9 @@ export default function ContactForm() {
       message: message,
     };
 
-    const serviceId = process.env.EMAILJS_SERVICE_ID;
-    const templateId = process.env.EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.EMAILJS_PROFILE_ID;
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PROFILE_ID;
 
     emailjs.send(serviceId, templateId, templateParams, publicKey).then(
       (result) => {
@@ -58,8 +58,6 @@ export default function ContactForm() {
         alert("Email failed :(");
       },
     );
-
-    // holding off email functionality for now
 
     makeInputsValid();
     handleReset();
