@@ -92,6 +92,7 @@ export default function index({ aboutPage, skillsPage, projects, resume }) {
   );
 }
 
+// called by next.js during build
 export async function getStaticProps() {
   const aboutPage = await getAboutPage();
   const skillsPage = await getSkillsPage();
